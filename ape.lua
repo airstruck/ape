@@ -78,7 +78,7 @@ local function sort (self, sort)
         local p = self.plugins[i]
         p:disable(self.context)
     end
-    table.sort(t, sort)
+    table.sort(self.plugins, sort)
     for i = 1, #self.plugins do
         local p = self.plugins[i]
         if p.pluginState == 'enabled' then
